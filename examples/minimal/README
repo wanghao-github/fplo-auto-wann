@@ -1,0 +1,29 @@
+# Minimal example
+
+This example demonstrates the basic input structure for running `fplo-auto-wann` on a single material.
+
+## Files
+
+- `input.cif`: example crystal structure
+- `config.yaml`: example workflow configuration
+
+## Purpose
+
+This example is intended to show:
+
+- how to organize a single-material workflow
+- how to specify FPLO and Slurm settings
+- how to define which steps of the workflow should run
+
+## Notes
+
+- The paths in `config.yaml` are placeholders and must be adapted to your local machine or HPC cluster.
+- The included `input.cif` is only a minimal example structure for testing parsing and workflow setup.
+- This example is mainly for illustrating usage and repository structure during the current refactoring stage.
+
+## Example usage
+
+A future command-line usage may look like:
+
+```bash
+fplo-auto-wann run examples/minimal/config.yaml
