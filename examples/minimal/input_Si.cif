@@ -19,5 +19,5 @@ _atom_site_type_symbol
 _atom_site_fract_x
 _atom_site_fract_y
 _atom_site_fract_z
-Si1 Si 0.00000 0.00000 0.0000
-Si2 Si 0.25000 0.25000 0.2500
+Si1 Si 0.00000 0.00000 0.00000
+Si2 Si 0.25000 0.25000 0.25000
