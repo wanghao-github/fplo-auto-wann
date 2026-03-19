@@ -1,0 +1,52 @@
+---
+
+## `examples/minimal/config.yaml`
+
+```yaml
+project:
+  name: Si_minimal
+  structure: examples/minimal/input.cif
+  workdir: ./runs/Si_minimal
+
+fplo:
+  fedit_bin: /path/to/fedit22.02-64-x86_64
+  fplo_bin: /path/to/fplo22.02-64-x86_64
+  xc_functional: "Perdew Burke Ernzerhof 96"
+  relativistic: "full relativistic"
+
+slurm:
+  account: your_account
+  partition: your_partition
+  time_scf: "00:30:00"
+  time_band: "00:30:00"
+  time_wann: "00:30:00"
+  mem_per_cpu: 4096
+  ntasks_scf: 1
+  ntasks_post: 16
+
+kpoints:
+  scf_density: 0.02
+  volume_scan_density: 0.03
+
+wannier:
+  dos_threshold: 1.0e-6
+  orbital_threshold:
+    s: 0.1
+    p: 0.3
+    d: 0.5
+    f: 0.7
+  max_energy: 60.0
+  initial_emax: 4.0
+  step: 0.05
+
+workflow:
+  steps:
+    - gen_input
+    - scf
+    - band
+    - wann
+    - plot_band
+
+plot:
+  energy_min: -10
+  energy_max: 10
